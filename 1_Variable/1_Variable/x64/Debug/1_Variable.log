@@ -1,0 +1,9 @@
+﻿  name.cpp
+D:\cppWorks\1_Variable\1_Variable\name.cpp(37,6): warning C4309: '=': 상수 값이 잘립니다.
+D:\cppWorks\1_Variable\1_Variable\name.cpp(46,15): warning C4101: 'ua' :참조되지 않은 지역 변수입니다.
+D:\cppWorks\1_Variable\1_Variable\name.cpp(45,6): warning C4101: 'a' :참조되지 않은 지역 변수입니다.
+D:\cppWorks\1_Variable\1_Variable\name.cpp(36,16): warning C4101: 'uc' :참조되지 않은 지역 변수입니다.
+D:\cppWorks\1_Variable\1_Variable\name.cpp(47,8): warning C4101: 's' :참조되지 않은 지역 변수입니다.
+D:\cppWorks\1_Variable\1_Variable\name.cpp(48,7): warning C4101: 'l' :참조되지 않은 지역 변수입니다.
+D:\cppWorks\1_Variable\1_Variable\name.cpp(49,12): warning C4101: 'll' :참조되지 않은 지역 변수입니다.
+  1_Variable.vcxproj -> D:\cppWorks\1_Variable\x64\Debug\1_Variable.exe

@@ -115,20 +115,15 @@ int main() {
 	unsigned int sec = 987654321;
 
 	unsigned int min = sec / 60;
-	sec = sec % 60;	// 16460905 min  21 sec
+	sec = sec % 60;	// 16460905 min 21 sec
 
 	unsigned int hour = min / 60;
-	min = min % 60;	//
+	min = min % 60;	// 174348 hour 25 min
 
 	unsigned int day = hour / 24;
-	hour = hour % 24;
-
-	/*unsigned int mon = day / 30;
-	day = day % 30;
-
-	unsigned int year = mon / 365;
-	mon = mon % 365;*/
-
+	hour = hour % 24;	// 11431 day 4 hour
+	
 	printf("%d %d %d %d", day, hour, min, sec);
+	// 11431 4 25 21
 
 }
