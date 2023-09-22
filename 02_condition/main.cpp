@@ -49,28 +49,28 @@ int main()
 	//	printf("-------------------\n");
 	//}
 
-	//while (1) {
-	//	int backNum = 0;
+	while (1) {
+		int backNum = 0;
 
-	//	printf("Enter player back number: ");
-	//	scanf_s("%d", &backNum);
+		printf("Enter player back number: ");
+		scanf_s("%d", &backNum);
 
-	//	switch (backNum) {	// 4-3-3
-	//	case 1:	 printf("GK\n"); break;
-	//	case 2:  
-	//	case 3:	
-	//	case 4:
-	//	case 5:  printf("DF\n"); break;
-	//	case 7: 
-	//	case 9: 
-	//	case 10: printf("FW\n"); break;
-	//	case 11:
-	//	case 13:
-	//	case 15: printf("MF\n"); break;
-	//	default: // 위의 케이스가 모두 해당되지 않으면 실행
-	//		printf("Bench\n");
-	//	}
-	//}
+		switch (backNum) {	// 4-3-3
+		case 1:	 printf("GK\n"); break;
+		case 2:  
+		case 3:	
+		case 4:
+		case 5:  printf("DF\n"); break;
+		case 7: 
+		case 9: 
+		case 10: printf("FW\n"); break;
+		case 11:
+		case 13:
+		case 15: printf("MF\n"); break;
+		default: // 위의 케이스가 모두 해당되지 않으면 실행
+			printf("Bench\n");
+		}
+	}
 
 	// light 값을 입력받아 true면 파란불, 아니면 빨간불
 	int light = 0;
