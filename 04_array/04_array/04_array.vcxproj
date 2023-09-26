@@ -130,10 +130,12 @@
     <ClCompile Include="bankAccount.cpp" />
     <ClCompile Include="calcFunc.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="overloading.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bank.h" />
     <ClInclude Include="calcFunc.h" />
+    <ClInclude Include="overloading.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
