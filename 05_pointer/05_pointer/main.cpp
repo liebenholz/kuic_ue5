@@ -206,6 +206,7 @@ void bubbleSort(int arr[], int n) {
 	}
 }
 
+// 크기 10의 정수 배열 정렬하기
 void ptr06() {
 	// 아래 배열을 낮은 숫자 순서대로 출력
 	int arrInt[10] = { 10, 2, 78, 53, 6, 33, 27, 99, 7, 31 };
@@ -218,6 +219,56 @@ void ptr06() {
 	}printf("\n");
 }
 
+// num 받아서 출력
+void printNum(const int* num) {
+	// num = nullptr;		// 포인터 주소 변경 가능
+	// *num = 2;
+	printf("print number : %d\n", *num);
+}
+
+void printNum2(const int& num) {
+	// num = nullptr;		// 포인터 주소 변경 불가, 안전함
+	// *num = 2;
+	printf("print number : %d\n", num);
+}
+
+void constant01() {
+	// 실수를 줄일 수 있어 디버깅 횟수 감소
+	const int cint = 100;	// 상수
+		
+	int value = 0, value2 = 0;
+	int* pValue = &value;
+	// 포인터가 가리키는 내용 수정 불가, 포인터 값 수정 가능, 참조 가능
+	// const int* pValue = &value;	
+	// int const* pValue = &value;
+	
+	// 포인터가 가리키는 내용 수정 가능, 포인터 값 수정 불가, 참조 가능
+	// int* const pValue = &value;	
+
+	// 포인터가 가리키는 내용 수정 불가, 포인터 값 수정 불가, 참조 가능
+	// const int* const pValue = &value;	
+	// int const* const pValue = &value;	
+
+	*pValue = 2;
+	pValue = &value2;
+	printf("pValue : %d\n", *pValue);
+
+	printNum(&value);
+	printNum2(value);
+}
+
+void printPhoneShop(const phoneShop* ps) {
+	printf("print phoneCnt : %d\n", ps->iPhoneCnt);
+}
+
+void printPhoneShop(const phoneShop& ps) {
+	printf("print phoneCnt : %d\n", ps.iPhoneCnt);
+}
+
+void constant02() {
+	
+}
+
 int main() {
 	// ptrIntro();
 	// ptr01();
@@ -225,7 +276,9 @@ int main() {
 	// ptr03();
 	// ptr04();
 	// ptr05();
-	ptr06();
+	// ptr06();
+
+	constant01();
 
 	system("pause");
 }
