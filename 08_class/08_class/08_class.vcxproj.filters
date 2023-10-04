@@ -18,5 +18,13 @@
     <ClCompile Include="class.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="myClass.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="myClass.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
