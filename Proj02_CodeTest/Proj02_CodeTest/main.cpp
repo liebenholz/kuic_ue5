@@ -47,6 +47,8 @@ void test03() {
 	int n = (int)wcslen(szWCharInput);
 	for (int i = 0; i < n; i++) {
 		if (*(szWCharInput + i) == 'a' || *(szWCharInput + i) == 'A') countA++;
+	//	if (szWCharInput[i] == 'a' || (szWCharInput[i] == 'A') countA++;
+		// 문자열 비교는 cmp를 써야함
 	}
 	printf("# of 'a': %d\n", countA);
 	printf("=================================\n");
