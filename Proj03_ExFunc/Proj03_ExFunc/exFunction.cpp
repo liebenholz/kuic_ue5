@@ -87,8 +87,10 @@ int main() {
 	int arr[10] = { 1, 2, 3, 4, 5, 5, 6, 7, 8, 9 };
 	printf("Sum of Array : %d\n", arrSum(arr, 10));
 
-	cFruitShop myShop(10, 100);
-	myShop.printValue();
+	cPhoneShop myShop1(10, 100);
+	myShop1.printValue();
+	cFruitShop myShop2(10, 100);
+	myShop2.printValue();
 
 	system("pause");
 }
