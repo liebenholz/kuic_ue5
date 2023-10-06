@@ -87,8 +87,11 @@ int main() {
 	int arr[10] = { 1, 2, 3, 4, 5, 5, 6, 7, 8, 9 };
 	printf("Sum of Array : %d\n", arrSum(arr, 10));
 
+	// CPhoneShop(10, 100) 생성 후 객체에 printValue 출력
 	cPhoneShop myShop1(10, 100);
 	myShop1.printValue();
+
+	// CFruitShop(10, 100) 생성 후 객체에 printValue 출력
 	cFruitShop myShop2(10, 100);
 	myShop2.printValue();
 
