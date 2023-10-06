@@ -3,6 +3,15 @@
 #include <vector>
 #include <list>
 
+struct stMonster {
+	int index = 0;	// 몬스터 타입
+};
+
+// mon.index가 3이면 true, 아니면 false.
+bool isFindMonIndex(const stMonster& mon) {
+	return mon.index == 3;
+}
+
 class CShop {
 public:
 	int isOpen = false;
@@ -194,7 +203,53 @@ void list04() {
 	else {
 		printf("Element 5 Not Found!\n");	// 못 찾았다
 	}
+}
 
+void list05() {
+	std::list<int> listInt{ 98, 6, 9, 30, 1, 0 };
+
+	// 리스트에서 특정 원소 제거
+	std::list<int>::iterator it = std::find(listInt.begin(), listInt.end(), 1);
+	if (it != listInt.end()) {
+		printf("Elemnet %d Found!\n", *it);	// 찾았다
+
+		// 리스트에서 특정 원소 제거
+		listInt.erase(it);	
+
+		int value = 91;
+		// 특정요소 앞에 새로운 요소 끼워넣기
+		listInt.insert(it, value);	
+		listInt.emplace(it, value);
+
+	}
+	else {
+		printf("Element Not Found!\n");	// 못 찾았다
+	}
+}
+
+void list06() {
+	std::list<stMonster> arrMon;
+
+	for (int i = 0; i < 5; i++) {
+		stMonster temp;
+		temp.index = i;
+		arrMon.push_back(temp);
+	}
+
+	std::list<stMonster>::iterator monIter;
+	// monIter = std::find_if(arrMon.begin(), arrMon.end(), isFindMonIndex);
+	monIter = std::find_if(arrMon.begin(), arrMon.end(), [](const stMonster& mon) { return mon.index == 3; });
+
+	if (monIter != arrMon.end()) {
+		printf("Monster %d Found!\n", monIter->index);
+	}
+	else {
+		printf("Monster Not Found!\n");
+	}
+
+	for (const stMonster& value : arrMon) {
+		printf("Monster Index : %d\n", value.index);
+	}
 }
 
 int main() {
@@ -225,9 +280,9 @@ int main() {
 	// list01();
 	// list02();
 	// list03();
-	list04();
-
-
+	// list04();
+	// list05();
+	list06();
 
 	system("pause");
 }
