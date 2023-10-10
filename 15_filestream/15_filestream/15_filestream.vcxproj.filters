@@ -18,37 +18,5 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="identifier.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="perCalc.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="bmiCalc.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="depositLoan.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="fromMToN.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="identifier.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="perCalc.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="bmiCalc.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="depositLoan.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="fromMToN.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
