@@ -7,6 +7,6 @@
 #include "highlow.h"
 
 int main() {
-	baseball();
-	// highlow();
+	// baseball();
+	highlow();
 }
