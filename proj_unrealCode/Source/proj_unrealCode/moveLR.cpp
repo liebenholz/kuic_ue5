@@ -1,6 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "moveLR.h"
 
 // Sets default values
@@ -34,6 +33,7 @@ AmoveLR::AmoveLR()
 	//if (sm.Succeeded()) {	// 에셋을 성공적으로 불러왔으면
 	//	StaticMesh->SetStaticMesh(sm.Object);	// StaticMeshComponent에 StaticMesh 적용
 	// }
+
 }
 
 AmoveLR::~AmoveLR()
@@ -52,24 +52,24 @@ void AmoveLR::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);	// 오버라이드한 함수인 경우 부모 함수를 실행한다.
 
+	if (m_isPlay == false)
+		return;
 
-	if (IsMoveRight) {
-		LocX++;	// 오른쪽 이동
-		StaticMesh->SetRelativeLocation(FVector(LocX, 0, 0));
-		if (LocX >= 100) IsMoveRight = false;
+	if (m_IsMoveRight) {
+		m_LocX++;	// 오른쪽 이동
+		StaticMesh->SetRelativeLocation(FVector(m_LocX, 0, 0));
+		if (m_LocX >= 100) m_IsMoveRight = false;
 	}
 
 	else {
-		LocX--;
-		StaticMesh->SetRelativeLocation(FVector(LocX, 0, 0));
-		if (LocX <= 0) IsMoveRight = true;
+		m_LocX--;
+		StaticMesh->SetRelativeLocation(FVector(m_LocX, 0, 0));
+		if (m_LocX <= 0) m_IsMoveRight = true;
 	}
+}
 
-	// IsMoveRight;	// 움직일 방향
-	// LocX++;	// 오른쪽 이동
-	// LocX--;	// 왼쪽 이동
-	// SetRelativeLocation : 상대적인 위치값을 설정한다.
-	// FVector : 언리얼에서 사용하는 3차원 좌표 변수.
-	// StaticMesh->SetRelativeLocation(FVector(LocX,0,0));
+void AmoveLR::cPlay_Implementation(bool isPlay)
+{
+	m_isPlay = isPlay;
 }
 
