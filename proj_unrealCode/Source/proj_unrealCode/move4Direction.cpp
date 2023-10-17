@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "move4Direction.h"
+#include "Switch.h"
 
 // Sets default values
 Amove4Direction::Amove4Direction()
@@ -25,6 +26,9 @@ Amove4Direction::~Amove4Direction()
 void Amove4Direction::BeginPlay()
 {
 	Super::BeginPlay();
+
+	if (IsValid(m_Switch))
+		m_Switch->FDele_EventOverlap.AddDynamic(this, &Amove4Direction::EventOverlap);
 }
 
 // Called every frame
@@ -57,6 +61,11 @@ void Amove4Direction::Tick(float DeltaTime)
 		if (m_PosZ <= 0) MoveType = EN_MoveTypeCode::MoveRight;
 		break;
 	}
+}
+
+void Amove4Direction::EventOverlap(bool isBegin)
+{
+	m_isPlay = isBegin;
 }
 
 void Amove4Direction::cPlay_Implementation(bool isPlay)

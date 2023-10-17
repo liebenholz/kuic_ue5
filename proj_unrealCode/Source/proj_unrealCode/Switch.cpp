@@ -48,6 +48,7 @@ void ASwitch::OnSwitchBeginOverlap(UPrimitiveComponent* OverlappedComponent, AAc
 	// TEXT("BeginOverlap") : 출력할 텍스트
 	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, TEXT("BeginOverlap"));
 
+	/*
 	// 인터페이스를 활용한 변수 읽어오기
 	for (AActor* pActor : arrActors) {
 		IInterfacePlayObj* InterfaceObj = Cast<IInterfacePlayObj>(pActor);	// 상속한 인터페이스 형변환
@@ -57,6 +58,9 @@ void ASwitch::OnSwitchBeginOverlap(UPrimitiveComponent* OverlappedComponent, AAc
 			InterfaceObj->Execute_cPlay(pActor, true);
 		}
 	}
+	*/
+	if (FDele_EventOverlap.IsBound())		// 바인딩된 함수가 있는지 체크
+		FDele_EventOverlap.Broadcast(true);	// 델리게이트 이벤트 호출(디스패처 호출과 같음)
 
 	/*
 	// 형변환을 활용한 변수 읽어오기
@@ -104,6 +108,7 @@ void ASwitch::OnSwitchEndOverlap(UPrimitiveComponent* OverlappedComponent, AActo
 {
 	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, TEXT("EndOverlap"));
 
+	/*
 	for (AActor* pActor : arrActors) {
 		IInterfacePlayObj* InterfaceObj = Cast<IInterfacePlayObj>(pActor);	// 상속한 인터페이스 형변환
 		if (InterfaceObj) {
@@ -112,6 +117,10 @@ void ASwitch::OnSwitchEndOverlap(UPrimitiveComponent* OverlappedComponent, AActo
 			InterfaceObj->Execute_cPlay(pActor, false);
 		}
 	}
+	*/
+
+	if (FDele_EventOverlap.IsBound())		// 바인딩된 함수가 있는지 체크
+		FDele_EventOverlap.Broadcast(false);	// 델리게이트 이벤트 호출(디스패처 호출과 같음)
 
 	/*
 	for (AActor* pActor : arrActors) {

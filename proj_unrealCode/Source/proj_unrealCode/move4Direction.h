@@ -34,6 +34,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION()	// 바인딩하는 함수들은 모두 UFUNCTION으로
+	void EventOverlap(bool isBegin);
+
 public:
 	UFUNCTION(BlueprintCallable, BlueprintNativeEvent)
 	void cPlay(bool isPlay);	// 블루프린트 호출용 함수명 선언 
@@ -53,4 +56,7 @@ public:
 	float m_PosX = 0;
 	float m_PosZ = 0;
 	bool m_isPlay = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TObjectPtr<class ASwitch> m_Switch;
 };

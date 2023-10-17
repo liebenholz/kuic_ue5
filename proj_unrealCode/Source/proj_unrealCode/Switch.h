@@ -7,6 +7,14 @@
 #include "GameFramework/Actor.h"
 #include "Switch.generated.h"
 
+// DECLARE_DYNAMIC_MULTICAST_DELEGATE : 여러 개의 이벤트를 바인딩 가능. 블루프린트와도 연동됨.
+// (N)Param : 파라미터의 갯수
+// FDele_EventOverlap_OneParam : 델리게이트 이름
+// bool, isBegin : 파라미터의 자료형과 변수명
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FDele_EventOverlap_OneParam, bool, isBegin);
+// DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParam(FDele_EventOverlap_OneParam, bool, isBegin, int, num1, int, num2);
+
+
 UCLASS()
 class PROJ_UNREALCODE_API ASwitch : public AActor
 {
@@ -51,4 +59,6 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UStaticMeshComponent* StaticMesh;
 
+	UPROPERTY(BlueprintAssignable, VisibleAnywhere, BlueprintCallable)
+	FDele_EventOverlap_OneParam FDele_EventOverlap;
 };

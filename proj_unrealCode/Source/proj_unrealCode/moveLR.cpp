@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "moveLR.h"
+#include "Switch.h"
 
 // Sets default values
 AmoveLR::AmoveLR()
@@ -44,6 +45,9 @@ AmoveLR::~AmoveLR()
 void AmoveLR::BeginPlay()
 {
 	Super::BeginPlay();
+
+	if (IsValid(m_Switch))
+		m_Switch->FDele_EventOverlap.AddDynamic(this, &AmoveLR::EventOverlap);
 	
 }
 
@@ -66,6 +70,11 @@ void AmoveLR::Tick(float DeltaTime)
 		StaticMesh->SetRelativeLocation(FVector(m_LocX, 0, 0));
 		if (m_LocX <= 0) m_IsMoveRight = true;
 	}
+}
+
+void AmoveLR::EventOverlap(bool isBegin)
+{
+	m_isPlay = isBegin;
 }
 
 void AmoveLR::cPlay_Implementation(bool isPlay)
