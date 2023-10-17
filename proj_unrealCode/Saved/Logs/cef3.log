@@ -1,1 +1,6 @@
-[1017/103922.713:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[1017/130833.509:ERROR:cache_util_win.cc(20)] Unable to move the cache: 액세스가 거부되었습니다. (0x5)
+[1017/130833.510:ERROR:cache_util.cc(144)] Unable to move cache folder D:/cppWorks/kuic_ue5/proj_unrealCode/Saved/webcache_4430\Cache to D:/cppWorks/kuic_ue5/proj_unrealCode/Saved/webcache_4430\old_Cache_000
+[1017/130833.510:ERROR:disk_cache.cc(184)] Unable to create cache
+[1017/130844.241:WARNING:value_store_frontend.cc(45)] Reading mhjfbmdgcfjbbpaeojofohoefgiehjai.alarms from  failed: IO error: .../LOCK: File currently in use. (ChromeMethodBFE: 15::LockFile::2)
+[1017/131027.514:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
+[1017/131032.783:ERROR:gpu_init.cc(426)] Passthrough is not supported, GL is disabled
